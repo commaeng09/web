@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta property="og:image" content=""/> 
+<meta property="og:title" content=""/>
+<meta property="og:description" content=""/> 
+<title>Untitled Document</title>
+<script src="http://code.jquery.com/jquery.min.js">
+</script>
+
+<link rel="stylesheet" href="css/mastar.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/jquery.bxslider.css">
+
+
+</head>
+
+<body>
+<div id="section01">
+    <div class="menu_box">
+        <div class="logo" >
+			<img src="images/logo.png" id="logo">
+		</div>
+        <ul class="navi">
+            <li><a href="#section01">About</a></li>
+            <li><a href="#section02">Work</a></li>
+            <li><a href="#section03">Portfolio</a></li>
+            <li><a href="#section04">Contact</a></li>
+		</ul>
+	</div>
+	<!-- menu end -->
+	
+	<div class="video-bg">
+		<video class="video" muted loop autoplay>
+			<source src="video/kanu.mp4" type="video/mp4">
+		</video>
+	</div>
+
+	<div class="bg-balck">
+
+	</div>
+
+	<div class="main-txt">
+		<h1>KANU</h1>
+	</div>
+</div>
+<!-- section01  -->
+
+
+
+
+
+
+<div id="section02">
+	<!-- <div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide slider1"></div>
+			<div class="swiper-slide slider2"></div>
+			<div class="swiper-slide slider3"></div>
+			<div class="swiper-slide slider4"></div>
+			<div class="swiper-slide slider5"></div>
+		</div>
+	</div> -->
+</div>
+<!-- section02 -->
+<div id="section03">
+	<div class="warp">
+		<div class="container1 wow fadeIn">
+			<h1>성은이 오늘 남친 만남</h1>
+		</div>
+		<div class="container2 wow fadeInDown">
+			<h1>더이상 물어보지마세요!</h1>
+		</div>
+		<div class="container3 wow bounceInRight">
+			<h1>그래서 화장한거였음! 집에갈때 눈화장해야됨 아직 완성 다 안됨!</h1>
+		</div>
+	</div>
+</div>
+<!-- secction03 -->
+<div id="section04">
+	<div class="bxslider">
+		<img src="images/slider01.jpg" alt="">
+		<img src="images/slider02.jpg" alt="">
+		<img src="images/slider03.jpg" alt="">
+		<img src="images/slider04.jpg" alt="">
+		<img src="images/slider05.jpg" alt="">
+	</div>
+</div>
+<!-- section04 -->
+<div id="section05">
+
+</div>
+<!-- section05 -->
+<!-- <script src="js/swiper.min.js"></script> -->
+<script src="js/jquery.bxslider.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script>
+	
+	$(document).ready(function(){
+		$('.bxslider').bxSlider({
+			mode: 'horizontal',
+			infiniteLoop: true,
+			slideWidth: 1000,
+			speed: 800,
+			minSlides:3,
+			maxSlides:3,
+		});
+	});
+	new WOW().init();
+    
+	// var swiper = new Swiper('.swiper-container');
+	
+	/**스크롤이 설정한 높이 이상 내려갔을때 스타일추가하기**/
+	if (jQuery(window).width() > 0) {
+    jQuery(window).on("scroll",function(ev){
+        if(jQuery(window).scrollTop() > 150 ) { /**높이 픽셀 조정**/
+            jQuery('.menu_box').addClass('fixed');  /**위의 높이에서 .fixed 클래스를 추가합니다. 스타일에서 자유롭게 수치 조절 가능합니다.**/
+        }
+        else{
+			jQuery('.menu_box').removeClass('fixed');
+        }
+        return false;
+    });
+	}
+	
+	/**마우스 부드럽게 해당위치로 이동**/
+	$(function(){
+	   $('a[href^=#]').click(function() {
+		  var speed = 800;
+		  var href= $(this).attr("href");
+		  var target = $(href == "#" || href == "" ? 'html' : href);
+		  var position = target.offset().top;
+		  $('body,html').animate({scrollTop:position}, speed, 'swing');
+		  return false;
+	   });
+	});
+
+$(function(){
+	$("#logo").click(function(){
+		$('.navi').slideToggle();
+	});
+});
+
+
+
+</script>
+</body>
+</html>
