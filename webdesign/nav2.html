@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/css.css">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+nav{
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    background: antiquewhite;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    padding-top: 30px;
+}
+
+.menu-box{
+    padding-top: 55px;
+    display: flex;
+    position: relative;
+    text-align: center;
+    
+    
+}
+.main-menu{
+    width: 110px;
+    line-height: 45px;
+    background: white;
+    
+}
+.main-menu:hover{
+    background: black;
+    color: rgb(255, 255, 255);
+}
+.sub-menu{
+    color: black;
+    display: none;
+}
+.sub-menu>li>a{
+    display: block;
+    background: white;
+
+}
+.sub-menu>li:hover>a{
+    color: rgb(255, 255, 255);
+    background: rgb(0, 0, 0);
+
+}
+
+
+/* -------------------------
+ */
+section{
+    width: 1200px;
+    height: 300px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.slider{
+    width: 1200px;
+    height: 300px;
+    transition: all 0.4s;
+    position: relative;
+}
+
+.img1{
+    position: absolute;
+    left:0;
+    z-index: 999;
+}
+.img2{
+    position: absolute;
+    left:1200px;
+    z-index: 999;
+}
+.img3{
+    position: absolute;
+    left:2400px;
+    z-index: 999;
+}
+
+.slider-1{
+    width: 1200px;
+    height: 300px;
+    transition: all 0.4s;
+}
+    </style>
+</head>
+<body>
+    <div class="all">
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="img/logo.png" alt="로고">
+                </div>
+
+                <div class="menu">
+                    <div class="menu-box">
+                        <li class="main-menu"><a href="#">메뉴1</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">서브1</a></li>
+                                <li><a href="#">서브2</a></li>
+                                <li><a href="#">서브3</a></li>
+                                <li><a href="#">서브4</a></li>
+                            </ul>
+                        </li>
+                        <li class="main-menu"><a href="#">메뉴2</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">서브1</a></li>
+                                <li><a href="#">서브2</a></li>
+                                <li><a href="#">서브3</a></li>
+                                <li><a href="#">서브4</a></li>
+                            </ul>
+                        </li>
+                        <li class="main-menu"><a href="#">메뉴3</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">서브1</a></li>
+                                <li><a href="#">서브2</a></li>
+                                <li><a href="#">서브3</a></li>
+                                <li><a href="#">서브4</a></li>
+                            </ul>
+                        </li>
+                        <li class="main-menu"><a href="#">메뉴4</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">서브1</a></li>
+                                <li><a href="#">서브2</a></li>
+                                <li><a href="#">서브3</a></li>
+                                <li><a href="#">서브4</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section>
+            <div class="slider">
+                <div class="slider-1">
+                <img src="just/images/img1.png" alt="슬라이드1" width="1200px" height="300px" class="img1">
+                <img src="just/images/img2.png" alt="슬라이드2" width="1200px" height="300px" class="img2">
+                <img src="just/images/img3.png" alt="슬라이드3" width="1200px" height="300px" class="img3">
+            </div>
+            </div>
+        </section>
+    </div>
+    <script src="just/js/jquery-2.1.3.min.js"></script>
+    <script src="js/js.js"></script>
+    <script>
+   setInterval(function(){
+    $('.slider').delay('2500');
+    $('.slider').animate({marginLeft:'-1200px'},500);
+    $('.slider').delay('2500');
+    $('.slider').animate({marginLeft:'-2400px'},500);
+    $('.slider').delay('2500');
+    $('.slider').animate({marginLeft:'0'},500);
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color:inherit;
+}
+
+.all{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+
+
+.header_box {
+  width: 1200px;
+  height: 100px;
+  position: relative;
+}
+
+.top_logo {
+  float: left;
+  width: 300px;
+  height: 40px;
+  text-align: center;
+  padding: 30px 0;
+}
+
+/*------네비------*/
+.navi_box {
+  position: absolute;
+  width: 600px;
+  height: 150px;
+  left: 590px;
+  margin: 60px 10px 0 0;
+  z-index: 1;
+}
+
+/*------네비상위메뉴------*/
+.menu {
+  position: relative;
+  float: left;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  font-size: 0;
+  background: #3cb149;
+}
+
+.menu>a {
+  position: relative;
+  display: block;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  float: left;
+  font-size: 1rem;
+  transition: 0.5s;
+  color: white;
+}
+
+.menu:hover>a {
+  background: #434748;
+  color: #3cb149;
+  font-weight: 800;
+}
+
+/*------네비하위메뉴------*/
+.navi_box_bg {
+  display: none;
+  position: absolute;
+  width: 1200px;
+  height: 110px;
+  top: 40px;
+  left: -590px;
+  z-index: 1;
+  background: #434748;
+  overflow: hidden;
+}
+
+.submenu_box {
+  display: none;
+  position: absolute;
+  top: 40px;
+  padding: 10px 0;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.submenu_box>a {
+  display: block;
+  width: 150px;
+  height: 30px;
+  text-align: center;
+  line-height: 32px;
+  font-size: 10pt;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.submenu_box>a:hover {
+  background: white;
+  color: #333333;
+  font-weight: bold;
+}

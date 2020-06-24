@@ -1,0 +1,285 @@
+@import url("reset.css");
+@font-face { font-family: 'GmarketSansBold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'GmarketSansMedium'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff'); font-weight: normal; font-style: normal; }
+/* top  */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ 
+
+  section h2 {
+    font-size: 4em;
+    color: #4b656d;
+  }
+  section h2 span {
+    display: block;
+    font-size: 0.5em;
+    color: #ff4983;
+  }
+  section p {
+    margin-top: 20px;
+    font-size: 1.2em;
+  }
+
+
+  .preloader {
+    position: relative;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #070707;
+    z-index: 10000000;
+  }
+
+  .top{
+      position: relative;
+  }
+
+  .text{
+      position: absolute;
+      top:0;
+  }
+  .preloader:before {
+    content: 'Lodaing';
+    position: absolute;
+    font-size: 10vh;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.3);
+    
+  }
+  .counter {
+    position: relative;
+    color: #fff;
+    font-size: 16em;
+    font-weight: 700;
+    z-index: 1;
+  }
+  .counter:after {
+    content: '%';
+    font-size: 0.5em;
+    
+  }
+  
+  .hide {
+    opacity: 0;
+    transition: 1s;
+    point-events: none;
+  }
+  
+  .preloader.active {
+    transform: translateY(-100vh);
+    transition: ease-in-out 2s;
+  }
+
+  /* lodaing  */
+
+
+  .title{
+      padding: 5% 0;
+      background-color: #f1f1f1;
+  }
+.title-img{
+    width: 1280px;
+    margin:0 auto;
+}
+
+.title-img{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.line01{
+    width: 400px;
+    height: 2px;
+    background-color: #000;
+}
+.line02{
+    width: 400px;
+    height: 2px;
+    background-color: #000;
+}
+
+
+.txt-title{
+    font-family: 'GmarketSansBold';
+}
+.gold{
+    color:#c1a969;
+    font-size: 4em;
+}
+.maintxt{
+    font-size:2.5em;
+    font-family: 'GmarketSansMedium'; 
+}
+.sub-title{
+    font-family: 'GmarketSansBold';
+    text-align: center;
+}
+.main-txt{
+    font-size: 4em;
+    margin-top: 0.4em;
+}
+.sub-txt{
+    font-size:2.5em;
+    font-family: 'GmarketSansMedium'; 
+}
+.line-warp{
+    width: 1280px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px 0;
+    border: 2px solid #c1a969;
+}
+.line-warp h1{
+    text-align: center;
+    font-size:2.5em;
+    font-family: 'GmarketSansBold';
+}
+.line-warp h1 span{
+ color:red;
+ animation-name: sub;
+ animation-duration: 1s;
+ animation-iteration-count: infinite;
+}
+.video-bg{
+    padding: 0;
+    background-color: #030303;
+}
+.video{
+    width: 1280px;
+    margin:0 auto;
+}
+.lotto-video{
+    width: 100%;
+}
+
+
+
+@keyframes sub {
+    0%{
+        opacity: 1;
+    }
+    25%{
+        opacity:0.3;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0.3;
+    }
+    
+    100%{
+        opacity:1;
+    }
+  }
+
+  .event{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .event-txt{
+      display: flex;
+    margin-top: 50px;
+      justify-content: center;
+  }
+  .event-txt>h1{
+    font-size:2em;
+    font-family: 'GmarketSansBold';
+  }
+  .border-line>h1{
+      text-align: center;
+      font-size: 8em;
+  }
+  footer{
+      padding: 50px;
+      text-align: center;
+      color:#fff;
+      background-color: #1e1e1e;
+      
+  }
+
+  
+@media(max-width:1160px){
+
+.counter {
+    position: relative;
+    color: #fff;
+    font-size: 9em;
+    font-weight: 700;
+    z-index: 1;
+}
+    .title-img{
+        width: 100%;
+    }
+    .line01{
+        display: none;
+    }
+    .line02{
+        display: none;
+    }
+    .title-img{
+        align-items: center;
+        justify-content: center;
+    }
+    .txt-title>h1{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .title{
+        padding: 30px 0; 
+    }
+    .main-txt{
+        font-size: 2.5em;
+        margin-top: 0.4em;
+    }
+    .sub-txt{
+        font-size:1.5em;
+        font-family: 'GmarketSansMedium'; 
+    }
+    .line-warp{
+        width: 100%;
+    }
+    .line-warp h1{
+        font-size:1.8em;
+    }
+    .event-txt{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 30px;
+    }
+    .event-txt>h1{
+        font-size: 1.5em;
+    }
+    .red{
+        color:red;
+    }
+    .border-line{
+        display: none;
+    }
+    .video{
+        width: 100%;
+        margin:0 auto;
+    }
+    .lotto-video{
+        width: 100%;
+    }
+}

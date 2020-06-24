@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #slide_box{ 
+            position: relative; 
+            height:300px; 
+        } 
+        #slide_box>a{ 
+            position: absolute; 
+            width: 1200px; 
+            height: 300px; 
+        }
+
+    </style>
+</head>
+<body>
+    <section> 
+        <div id="slide_box"> 
+            <a href="#"><img src="img/slide01.jpg" alt="슬라이드1"></a>
+            <a href="#"><img src="img/slide02.jpg" alt="슬라이드2"></a>
+            <a href="#"><img src="img/slide03.jpg" alt="슬라이드3"></a>
+        </div> 
+    </section>
+<script type="text/javascript">
+    //이미지페이드인아웃 
+    start(); 
+    var imgs = $('#slide_box>a').length - 1; 
+    var now = 0; 
+    function start() { 
+        $('#slide_box>a').eq(0).siblings().fadeOut('slow'); 
+        setInterval(function() { 
+            slide(); }, 3000);
+        }; 
+            function slide() { 
+                now = now == imgs ? 0 : now += 1; 
+                $('#slide_box>a').eq(now - 1).fadeOut('slow'); 
+                $('#slide_box>a').eq(now).fadeIn('slow'); 
+            };
+</script>
+</body>
+</html>
