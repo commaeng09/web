@@ -1,0 +1,48 @@
+
+
+
+.section01{
+    background: #000;
+    background-position: bottom center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+
+}
+
+.main-img-01{
+    background: url('../images/K7_Premier-_01features_w.webp');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.main-img-02{
+    background: url('../images/K7_Premier-_01features_w.webp');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+#s2c,#m2c,#g2c,#b2c,#w2b{
+    display: none;
+}
+.color-text>ul{
+    display: flex;
+}
+.color-text>ul>li{
+    width: 50px;
+    height: 50px;
+    margin: 10px 5px;
+    list-style: none;
+    border: 1px solid #ccc;
+}
+
+.text-content>ul>li{
+    list-style: none;
+}
+.w2c{
+    background-color: snow;
+}
+.s2c{
+    background-color: silver;
+}
+
