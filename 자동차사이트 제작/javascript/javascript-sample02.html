@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="arrays01"></div>
+    <div class="arrays02"></div>
+    <div class="arrays03"></div>
+    <div class="arrays04"></div>
+    <div class="arrays05"></div>
+    <div class="arrays06"></div>
+    <div class="arrays07"></div>
+    <div class="arrays08"></div>
+
+    <div class="arrays09"></div>
+    <div class="arr">
+        <p class="arrays10"></p>
+        <button onclick="myFunction();">클릭해주세요! 레몬을 추가하죠!</button>
+    </div>
+    <div class="arrays11"></div>
+    <div class="arrays12"></div>
+    <div class="arrays13"></div>
+    <div class="arrays14"></div>
+    <div class="arr">
+        <p class="arrays15"></p>
+        <button onclick="myFunction2();">클릭해주세요! </button>
+    </div>
+
+    <div class="arr">
+        <p class="arrays16"></p>
+        <button onclick="myFunction3();">클릭해주세요! </button>
+    </div>
+
+
+    <div>
+        <p class="arrays20"></p>
+        <button onclick="myFunction_a();">클릭해주세요! </button>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js">
+    </script>
+
+    <script type="text/javascript">
+
+        
+var points = [40, 100, 1, 5, 25, 10];
+document.querySelector(".arrays20").innerHTML = points;  
+
+function myFunction_a() {
+  points.sort(function(a, b){return 0.5 - Math.random()});
+  document.querySelector(".arrays20").innerHTML = points;
+}
+
+
+
+
+    var cars = ["Saab", "Volvo", "BMW"];
+    document.querySelector(".arrays01").innerHTML = cars;
+    
+    var cars02 = [
+                "Saab",
+                "Volvo",
+                "BMW"
+            ];
+document.querySelector(".arrays02").innerHTML = cars02;
+
+var cars03 = new Array("Saab", "Volvo", "BMW");
+document.querySelector(".arrays03").innerHTML = cars03;
+
+
+var cars04 = ["Saab", "Volvo", "BMW"];
+cars04[0]="다른놈!";
+document.querySelector(".arrays04").innerHTML = cars04;
+
+
+var person = {firstName:"John", lastName:"Doe", age:46};
+document.querySelector(".arrays05").innerHTML = person["firstName"];
+
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.querySelector(".arrays06").innerHTML = fruits.length;
+
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var last = fruits[fruits.length-1];
+document.querySelector(".arrays07").innerHTML = last;
+
+
+// 배열을 선택하는 방법  
+
+var fruits, text, fLen, i;
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+fLen = fruits.length;
+
+text = "<ul>";
+for (i = 0; i < fLen; i++) {
+  text += "<li>" + fruits[i] + "</li>";
+}
+text += "</ul>";
+
+document.querySelector(".arrays08").innerHTML = text+"<br>";
+
+
+// for 는 반복문입니다. 초기값, 조건식,증가값
+
+var fruits, text;
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+text = "<ul>";
+fruits.forEach(myFunction);
+text += "</ul>";
+document.querySelector(".arrays09").innerHTML = text+"<br>";
+
+function myFunction(value) {
+  text += "<li>" + value + "</li>";
+} 
+
+
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.querySelector(".arrays10").innerHTML = fruits;
+
+
+function myFunction() {
+  fruits.push("Lemon");
+  document.querySelector(".arrays10").innerHTML = fruits;
+}
+
+// 요소추가 
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.querySelector(".arrays11").innerHTML = fruits;
+fruits.pop();
+document.querySelector(".arrays11").innerHTML = fruits;
+
+// 요소삭제
+
+
+
+
+
+
+
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.querySelector(".arrays12").innerHTML = fruits.toString();
+
+// 문자열로 반환
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.querySelector(".arrays13").innerHTML = fruits.join(" * ");
+
+// 연결 
+
+
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.querySelector(".arrays14").innerHTML = fruits;
+fruits.shift();
+document.querySelector(".arrays14").innerHTML = fruits;
+// 첫 번째 배열 요소 (??)
+
+var fruits02 = ["Banana", "Orange", "Apple", "Mango"];
+document.querySelector(".arrays15").innerHTML = fruits02;
+
+function myFunction2() {
+  fruits02.unshift("Lemon");
+  document.querySelector(".arrays15").innerHTML = fruits02;
+}
+
+// 앞에 요소를 추가 
+
+var fruits03 = ["Banana", "Orange", "Apple", "Mango"];
+document.querySelector(".arrays16").innerHTML = "Original Array:<br>" + fruits03;
+function myFunction3() {
+  fruits03.splice(1, 0, "Lemon", "Kiwi");
+  document.querySelector(".arrays16").innerHTML = "New Array:<br>" + fruits03;
+}
+
+var myGirls = ["Cecilie", "Lone"];
+var myBoys = ["Emil", "Tobias", "Linus"];
+var myChildren = myGirls.concat(myBoys);
+
+document.querySelector(".arrays17").innerHTML = myChildren;
+
+// var arr1 = ["Cecilie", "Lone"];
+// var arr2 = ["Emil", "Tobias", "Linus"];
+// var arr3 = ["Robin", "Morgan"];
+// var myChildren = arr1.concat(arr2, arr3);
+
+var fruits05 = ["Banana", "Orange", "Apple", "Mango"];
+document.querySelector(".arrays18").innerHTML = fruits05;
+
+function myFunction() {
+  fruits05.sort();
+  document.querySelector(".arrays18").innerHTML = fruits05;
+}
+
+
+var fruits7 = ["Banana", "Orange", "Apple", "Mango"];
+document.querySelector(".arrays19").innerHTML = fruits7;
+
+function myFunction() {
+
+  fruits7.sort();
+
+  fruits7.reverse();
+  document.querySelector(".arrays19").innerHTML = fruits7;
+}
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
