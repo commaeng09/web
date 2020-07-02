@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM(Document Objuct Model)</title>
+	<style>
+		#box{
+			width: 100px; height: 100px;
+            border: 3px solid black;
+            position: relative;
+        }
+	</style>
+</head>
+<body>
+	<div id="box">
+		<p>마우스를 올려 주세요</p>
+	</div>
+	<script>
+
+var box = document.querySelector('#box');
+    var touch = {
+        a: function(){
+            box.innerHTML = '나를 건드렸군요!';
+            this.style.background = "red";
+        },
+        b: function(){
+            box.innerHTML = '손을 떼었군요!';
+            this.style.background = '';
+        },
+        c: function(e){
+				// 현재 터치 이벤트의 위치(배열) 감지
+				var touchobj = e.changedTouches[0];
+				// 현재 손가락 위치
+				var x = parseInt(touchobj.clientX), 
+						y = parseInt(touchobj.clientY),
+						ex = x - 0;
+						ey = y - 0;
+				box.innerHTML = '만지는 중입니다';
+				this.style.background = 'yellow';
+
+				this.style.left = ex+'px';
+				this.style.top = ey+'px';
+				console.log(touchobj);
+			}
+    } // 객체 끝
+
+// 터치 제어를 위한 객체 선언
+    
+    // 터치 이벤트 리스너 추가
+box.addEventListener('touchstart', touch.a);
+box.addEventListener('touchend', touch.b);
+box.addEventListener('touchmove', touch.c);
+
+    // touchstart 화면을 건드렸을 때 
+    // touchend 화면에서 손을 때었을 때
+    // touchmove 화면에서 터치로 이동 중일 
+	
+	</script>
+
+
+    <script type="text/javascript">
+// onClick  마우스를 클릭했을 때
+// onmouseover 마우스가 해당 내용안에 들어 왔을 때 
+// mouseout 마우스가 해당 내용안에 벗어났을 때
+// onkeydown 키보드를 입력했을 때
+// onkeyup 키보드를 땟을 때
+// onfocus.onblur 해당 요소가 선택 됫거나 해제 했을 때
+// onsubmit  폼 전송 이벤트가 발생했을 때
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font-style</title>
+    <style>
+        .serif {
+          font-family: "Times New Roman", Times, serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+        }
+        
+        .sansserif {
+          font-family: Arial, Helvetica, sans-serif;
+          font-style: italic;
+          font-weight: bold;
+          font-size: 20px;
+        }
+        
+        .monospace {
+          font-family: "Lucida Console", Courier, monospace;
+          font-style: oblique;
+          font-weight: 900;
+          font-size: 24px;
+          /* 100 ~ 900 */
+        }
+        p.normal {
+            font-variant: normal;
+            }
+
+            p.small {
+            font-variant: small-caps;
+            }
+    
+
+        .text{
+            width: 600px;
+            border: 1px solid #000000;
+            /* border-top: 1px solid #000;
+            border-bottom: 2px dashed red;
+            border-right: 3px dotted blue;
+            border-left: 5px solid yellow; */
+            /* dashed | dotted | double | groove | hidden | inset | none | outset | ridge | solid | initial | inherit */
+            /* border-radius: 10px 50px 10px 100px; */
+        }
+        .text>.text-main{
+            text-align: center;
+            text-transform: uppercase;
+            color: #4CAF50;
+        }
+
+        .text>p{
+            text-align: justify;
+        }
+        .test-box a{
+            text-decoration: none;
+            color:inherit;
+        }
+        </style>
+</head>
+<body>
+
+    <div class="text">
+        <h1 class="text-main">text formatting</h1>
+        <p>This text is styled with some of the text formatting properties. The heading uses the text-align, text-transform, and color properties.
+        The paragraph is indented, aligned, and the space between characters is specified. The underline is removed from this colored</p>
+    </div>
+
+
+    <div class="test-box">
+        <p>
+            링크란걸 배워요! 링크는 생각보다 외워야되요!! 지금 공부하세요!
+            즉 링크란 무엇인가! 이 하이퍼링크라고 합니다.<br>
+            <a href="#">클릭하세요!</a>
+            <a href="http://www.naver.com/" target="_blank">네이버</a>
+            <a href="http://www.daum.net" target="_top">다음</a>
+            <a href="http://www.nate.com" target="_self">네이트</a>
+            <a href="http://www.cyworld.com" target="_parent">싸이월드</a>
+
+
+        </p>
+    </div>
+
+
+
+      
+</body>
+</html>

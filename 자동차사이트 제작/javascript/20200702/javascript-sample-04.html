@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM(Document Objuct Model)</title>
+	<style>
+		#box{
+			width: 100px; height: 100px;
+			border: 3px solid black;
+		}
+		#box.hover{
+			background: orange;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	
+	<div id="box">
+		<p>마우스를 올려 주세요</p>
+	</div>
+
+	<script>
+		var box = document.getElementById('box');
+
+		// 마우스 오버
+		box.addEventListener('mouseover', function(){
+			box.setAttribute('class', 'hover');
+		});
+
+		// 마우스 아웃
+		box.addEventListener('mouseout', function(){
+			box.removeAttribute('class');
+		});
+	</script>
+
+
+    <script type="text/javascript">
+// onClick  마우스를 클릭했을 때
+// onmouseover 마우스가 해당 내용안에 들어 왔을 때 
+// mouseout 마우스가 해당 내용안에 벗어났을 때
+// onkeydown 키보드를 입력했을 때
+// onkeyup 키보드를 땟을 때
+// onfocus.onblur 해당 요소가 선택 됫거나 해제 했을 때
+// onsubmit  폼 전송 이벤트가 발생했을 때
+
+    </script>
+
+
+</body>
+</html>

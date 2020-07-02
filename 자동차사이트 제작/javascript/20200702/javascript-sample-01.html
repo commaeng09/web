@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p> setTimeout()을 이용한 예제입니다.</p>
+    <p>이미지를 클릭하시면 2초뒤에 다음 이미지로 바뀌게 됩니다.</p>
+    
+    <a href="javascript:image_onclick()" onfocus=this.blur()>
+
+    <a href="#"><image src="images/num1.jpg"></image></a>
+
+    <button onclick="stop_banner();"> 정지! </button>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+    var timerID;
+	var arrImage=new Array();
+	arrImage[0]="images/num1.jpg";
+	arrImage[1]="images/num2.jpg";
+	arrImage[2]="images/num3.jpg";
+	function image_onclick(){
+		timerID=setTimeout("change_image()", 2000);
+		alert("배너를 시작합니다.");
+    }
+	function change_image(){
+		var newImageNum=Math.round(Math.random()*2);
+		while(true){
+			if(document.banner.src.indexOf(arrImage[newImageNum]) >= 0){
+				newImageNum=Math.round(Math.random()*2);
+			}else{
+				document.banner.src = arrImage[newImageNum];
+				break;
+			}
+		}
+		timerID=setTimeout("change_image()", 2000);
+	}
+	function stop_banner(){
+		clearTimeout(timerID);
+		alert("방금 정지한 타이머의 식별자(ID)는 "+timerID+"입니다.");
+	}
+    </script>
+</body>
+
+</html>

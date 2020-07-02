@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM(Document Objuct Model)</title>
+	<style>
+		#add-btn{
+			padding: 5px 10px;
+			border: 0;
+			background: #f80; color: white;
+			border-radius: 5px;
+		}
+		ul{ 
+			padding: 0; 
+			list-style-position: inside;
+		}
+		li{
+			border-bottom: 1px solid #999;
+			padding: 5px 0;
+		}
+		.active{ background: #abc; }
+	</style>
+</head>
+<body>
+	
+	<h1 id='title'>목록을 클릭하면 글자가 변경됩니다.</h1>
+	<button id="add-btn">목록 추가</button>
+	<ul id='list'>
+		<li>제목 1</li>
+		<li>제목 2</li>
+		<li>제목 3</li>
+		<li>제목 4</li>
+	</ul>
+    <script>
+    var title = document.getElementById('title'); 
+	var list = document.getElementById('list');
+	var li = list.getElementsByTagName('li');
+	var addBtn = document.getElementById('add-btn');	// 목록 추가 버튼
+    var listCounter = 1;
+    
+    for(var i = 0; i < li.length; i++){
+		li[i].addEventListener('click', activeItem);
+	}
+
+	function activeItem(){
+    console.log(this);
+    // 해당 목록을 클릭하면 제목 영역에 표시
+    title.innerHTML = this.innerText;
+    // step3: 목록 스타일 초기화
+    for(var i = 0; i < li.length; i++){
+        li[i].removeAttribute('class');
+    }
+// 목록에 클래스 추가
+    this.setAttribute('class', 'active');
+    }
+// step2: 목록 추가
+    addBtn.addEventListener('click', function(){
+    var txt = prompt('제목 입력');
+    list.innerHTML += '<li>' + txt + '</li>';
+});
+
+
+    </script>
+</body>
+</html>
